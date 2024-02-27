@@ -1,9 +1,11 @@
 import { Card } from "./CardTypes"
+import { web } from "./QueryService"
+import { helper } from "./helper"
 
 const CardQueryService = {
     getCards: (card:Card)=>{
-        const searchFields = Object.keys(card)
-        console.log(searchFields)
+        const searchObject = helper.findValueFields(card)
+        console.log(searchObject)
     }
 }
 

@@ -6,8 +6,8 @@ export interface Card {
     ID?:number;
     Konami_ID?:string;
     Type?:string;
-    ATK?:number;
-    DEF?:number;
+    ATK?:Stat;
+    DEF?:Stat;
     Level?:Level;
     Race?:string;
     Attribute?:string;
@@ -24,6 +24,7 @@ export interface Card {
 }
 
 type Level = 0|1|2|3|4|5|6|7|8|9|10|11|12
+type Stat = number | "?"
 
         /* 
 -name - The exact name of the card. You can pass multiple | separated names to this parameter (Baby Dragon|Time Wizard).
